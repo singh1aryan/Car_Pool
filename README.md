@@ -1,18 +1,11 @@
 # CarPool
-Post a ride, and others can join you
-
-
-<br>
-Categories:- in the db ,using rails c (console)
-short trip(<10)<br> 
-medium trip()
-long trip
-
+Post a ride, and take others with you <br>
 
 How to make this in Rails:- <br>
 cars controller <br>
 car model <br>
-cars controller + views -- new, edit, show, index, form -- bootstrap <br>
+cars controller + views -- new, edit, show, index, form -- bootstrap <br><br>
+
 Helper methods in Job controller <br>
 <ul>
   <li>def cars_params
@@ -24,7 +17,7 @@ Helper methods in Job controller <br>
 	</li>
 </ul>
 
-rails c commands to make the Categories --
+## rails c commands to make the Categories --
 Category.connection - to establish a connection <br>
 Category.create(name: "Short Trip(<10 miles)") <br>
 Category.create(name: "Medium Trip(<10 miles)") <br>
@@ -36,3 +29,7 @@ reload the console and then @car = Car.last -- would give you the category id <b
 Have to change the index method to filter by the categories <br>
 
 
+## More to implement, 
+User login, sign up <br>
+Like, share the ride <br>
+Pay for the ride and book the seat<br>
