@@ -1,0 +1,8 @@
+%h1= @car.title    
+%p= @car.description
+%p= @car.owner
+%p= @car.price
+
+= link_to "Home", root_path
+= link_to "Edit", edit_car_path(@car)
+= link_to "Delete", car_path(@car), method: :delete, data: { confirm: "Are you sure?" }

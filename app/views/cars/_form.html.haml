@@ -1,0 +1,7 @@
+= simple_form_for(@car, html: { class: 'form-horizontal'}) do |f|
+    = f.input :title, label: "Destination Title"
+    = f.input :description, label: "Description"
+    = f.input :owner, label: "Owner Name"
+    = f.input :price, label: "Price for the trip (per person)"
+    %br/
+    = f.button :submit
