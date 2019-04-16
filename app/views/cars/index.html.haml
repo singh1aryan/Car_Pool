@@ -1,5 +1,5 @@
-- @cars.each do |car|
-    %h2= link_to car.title, car
-    %p= car.description
-
-= link_to "New Car Ride", new_car_path
+#cars
+    - @cars.each do |car|
+        .car
+            %h2= link_to car.title, car
+            %p= car.description
