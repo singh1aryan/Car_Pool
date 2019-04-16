@@ -2,7 +2,12 @@ class CarsController < ApplicationController
 	before_action :find_car, only: [:show, :edit, :update, :destroy]
 
 	def index
-		@cars = Car.all.order("created_at DESC")
+		if params[:category].blank?
+			@cars = Car.all.order("created_at DESC")
+		else
+			@category_id = Category.find_by(name: params[:category]).id
+			@cars = Car.where(category_id: @category_id).order("created_at DESC")
+		end
 	end
 
 	def show
@@ -41,7 +46,7 @@ class CarsController < ApplicationController
 	private
 
 	def cars_params
-		params.require(:car).permit(:title, :description, :owner, :price)
+		params.require(:car).permit(:title, :description, :owner, :price, :category_id)
 	end
 
 	def find_car
