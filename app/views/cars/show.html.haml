@@ -1,10 +1,12 @@
 #cars
     .car
-        %h1= @car.title    
-        %p= @car.description
-        %p= @car.owner
-        %p= @car.price
-        %button.btn.btn-default= link_to "Book your Seat", root_path
+        .card
+            %h1= @car.title    
+            %p= @car.description
+            %p= @car.owner
+            %p= @car.price
+            %button.btn.btn-default= link_to "Interested!", @car
+            %button.btn.btn-default= link_to "Book your Seat!", @car
 #links  
     = link_to "Back", root_path, class: "btn btn-sm btn-default"
     = link_to "Edit", edit_car_path(@car), class: "btn btn-sm btn-default"
