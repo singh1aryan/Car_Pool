@@ -15,6 +15,7 @@
 				- Category.all.each do |category|
 					%li= link_to category.name, cars_path(category: category.name)
 			= link_to "New Car Ride", new_car_path, class: "navbar-text navbar-right navbar-link"
+			= link_to "Sign In", new_user_session_path, class: "navbar-text navbar-right navbar-link"
 	.container
 		.col-md-6.col-md-offset-3
 			= yield
