@@ -29,7 +29,15 @@ reload the console and then @car = Car.last -- would give you the category id <b
 Have to change the index method to filter by the categories <br>
 
 
-## More to implement, 
 User login, sign up <br>
+User is made with a Devise in rails <br>
+Add it to the gemfile and bundle install<br>
+rails g devise:install<br>
+rails g devise:views<br>
+rails g devise User<br>
+rails db:migrate<br>
+
+
+## More to implement, 
 Like, share the ride <br>
 Pay for the ride and book the seat<br>
